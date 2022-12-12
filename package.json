@@ -23,6 +23,7 @@
   ],
   "author": "Andres Maneiro <amaneiro7@gmail.com>",
   "license": "MIT",
+  "homepage": "https://advicegenereatoram7.netlify.app/",
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/plugin-transform-runtime": "^7.19.6",
