@@ -6,29 +6,23 @@ const DotenvWebpackPlugin = require("dotenv-webpack");
 const ProgressPlugin = require('progress-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]',
-        clean: true,
     },
     resolve: {
-        extensions: ['js']
+        extensions: ['.js']
     },
+    mode: 'development',
     module: {
         rules: [
             {
                 test: /\.m?js$/,
                 exclude: /node_mdules/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            '@babel/preset-env',
-                        ]
-                    }
+                    loader: 'babel-loader',                    
                 }
             },
             {
